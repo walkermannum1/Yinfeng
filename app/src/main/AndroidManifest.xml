@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme">
         <meta-data android:name="com.baidu.lbsapi.API_KEY"
                    android:value="GFIM1XnU7bKyKdy3Dbr7oCScvFvPLLbp" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -31,7 +31,7 @@
         <service android:name="com.baidu.trace.LBSTraceService"
                  android:enabled="true"
                  android:exported="true" />
-        <service android:name="com.example.user.yinfeng.MonitorService"
+        <service android:name="com.example.user.yinfeng.service.MonitorService"
                  android:enabled="true"
                  android:exported="true" >
         </service>
