@@ -47,11 +47,104 @@
                     android:contentDescription="@null"/>
 
                 <TextView
-                    android:text="TextView"
+                    android:text="@string/ditu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/t_ditu"/>
+                    android:id="@+id/t_ditu"
+                    android:layout_below="@+id/i_ditu"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/huodong"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_huodong"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/huodong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_huodong"
+                    android:layout_below="@+id/i_huodong"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/mine"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_mine"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_mine"
+                    android:layout_below="@+id/i_mine"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/anquan"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_anquan"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/anquan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_anquan"
+                    android:layout_below="@+id/i_anquan"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_tab"
+            android:layout_below="@+id/top_bar"
+            android:orientation="vertical">
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottom_tab"/>
     </RelativeLayout>
 </FrameLayout>

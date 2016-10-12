@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Yinfeng</string>
+    <string name="ditu">骑行</string>
+    <string name="huodong">活动</string>
+    <string name="mine">我的</string>
+    <string name="anquan">安全</string>
 </resources>
