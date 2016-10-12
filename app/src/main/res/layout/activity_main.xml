@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.yinfeng.ui.activity.MainActivity">
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clickable="true" />
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</RelativeLayout>
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/topbar_bg">
+            
+            <ImageView
+                android:id="@+id/yf_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:baselineAligned="true">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/ditu"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_ditu"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_ditu"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
