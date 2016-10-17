@@ -9,14 +9,15 @@
     android:orientation="vertical"
     tools:context="com.example.user.yinfeng.ui.activity.MainActivity">
     <FrameLayout
-        android:id="@+id/top_bar"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1.11" />
 
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom"
+        android:background="@android:color/background_dark"/>
 </LinearLayout>
