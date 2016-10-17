@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
         bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.qix, "骑行").setActiveColorResource(R.color.bottom_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.qix, "活动").setActiveColorResource(R.color.topbar_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.qix, "我的").setActiveColorResource(R.color.bottom_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.qix, "安全").setActiveColorResource(R.color.topbar_bg))
+                           .addItem(new BottomNavigationItem(R.drawable.hd, "活动").setActiveColorResource(R.color.topbar_bg))
+                           .addItem(new BottomNavigationItem(R.drawable.wod, "我的").setActiveColorResource(R.color.bottom_bg))
+                           .addItem(new BottomNavigationItem(R.drawable.anq, "安全").setActiveColorResource(R.color.topbar_bg))
                            .setFirstSelectedPosition(0).initialise();
     }
 

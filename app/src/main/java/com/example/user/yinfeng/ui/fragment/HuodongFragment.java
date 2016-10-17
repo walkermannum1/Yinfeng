@@ -8,10 +8,6 @@ import android.view.ViewGroup;
 
 import com.example.user.yinfeng.R;
 
-import java.security.PublicKey;
-
-import static com.baidu.location.h.j.P;
-
 /**
  * Created by user on 2016/10/13.
  */
