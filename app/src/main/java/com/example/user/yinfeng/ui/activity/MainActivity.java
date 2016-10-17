@@ -15,12 +15,14 @@ import com.example.user.yinfeng.ui.fragment.AnquanFragment;
 import com.example.user.yinfeng.ui.fragment.HuodongFragment;
 import com.example.user.yinfeng.ui.fragment.MineFragment;
 import com.example.user.yinfeng.ui.fragment.QixingFragment;
+import com.example.user.yinfeng.ui.trace.QixApplication;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener {
     private ArrayList<Fragment> fragments;
+    private QixApplication qixApp = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +42,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.top_bar, QixingFragment.newInstance("Qixing"));
+        transaction.replace(R.id.top_bar, QixingFragment.newInstance(qixApp));
         transaction.commit();
     }
 
     private ArrayList<Fragment> getFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(QixingFragment.newInstance("Qixing"));
+        fragments.add(QixingFragment.newInstance(qixApp));
         fragments.add(HuodongFragment.newInstance("HD"));
         fragments.add(MineFragment.newInstance("Mine"));
         fragments.add(AnquanFragment.newInstance("safe"));

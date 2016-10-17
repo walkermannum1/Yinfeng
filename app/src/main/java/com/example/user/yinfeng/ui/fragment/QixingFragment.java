@@ -14,6 +14,7 @@ import com.example.user.yinfeng.ui.trace.QixApplication;
  */
 
 public class QixingFragment extends Fragment{
+    private QixApplication qixApp = null;
 
     public QixingFragment() {
 
