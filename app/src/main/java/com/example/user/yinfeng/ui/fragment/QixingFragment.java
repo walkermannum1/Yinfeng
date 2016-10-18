@@ -1,13 +1,13 @@
 package com.example.user.yinfeng.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.SupportMapFragment;
 import com.example.user.yinfeng.R;
 import com.example.user.yinfeng.ui.trace.QixApplication;
 
@@ -15,7 +15,7 @@ import com.example.user.yinfeng.ui.trace.QixApplication;
  * Created by user on 2016/10/11.
  */
 
-public class QixingFragment extends Fragment{
+public class QixingFragment extends SupportMapFragment {
     private QixApplication qixApp = null;
 
     public QixingFragment() {
