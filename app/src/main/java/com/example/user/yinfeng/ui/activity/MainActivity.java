@@ -19,7 +19,6 @@ import com.example.user.yinfeng.ui.trace.QixApplication;
 
 import java.util.ArrayList;
 
-
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener {
     private ArrayList<Fragment> fragments;
     private QixApplication qixApp = null;
@@ -29,20 +28,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_maina);
+        qixApp = (QixApplication) getApplicationContext();
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.qix, "骑行").setActiveColorResource(R.color.bottom_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.hd, "活动").setActiveColorResource(R.color.topbar_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.wod, "我的").setActiveColorResource(R.color.bottom_bg))
-                           .addItem(new BottomNavigationItem(R.drawable.anq, "安全").setActiveColorResource(R.color.topbar_bg))
+        bottomNavigationBar.setBarBackgroundColor(R.color.bottom_bg);
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.qix, "骑行").setActiveColorResource(R.color.bottom_cl))
+                           .addItem(new BottomNavigationItem(R.drawable.hd, "活动").setActiveColorResource(R.color.bottom_cl))
+                           .addItem(new BottomNavigationItem(R.drawable.wod, "我的").setActiveColorResource(R.color.bottom_cl))
+                           .addItem(new BottomNavigationItem(R.drawable.anq, "安全").setActiveColorResource(R.color.bottom_cl))
                            .setFirstSelectedPosition(0).initialise();
     }
 
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.top_bar, QixingFragment.newInstance(qixApp));
+        transaction.replace(R.id.fragment_content, QixingFragment.newInstance(qixApp));
         transaction.commit();
     }
 
@@ -63,9 +64,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 FragmentTransaction ft = fm.beginTransaction();
                 Fragment fragment = fragments.get(position);
                 if (fragment.isAdded()) {
-                    ft.replace(R.id.top_bar, fragment);
+                    ft.replace(R.id.fragment_content, fragment);
                 } else {
-                    ft.add(R.id.top_bar, fragment);
+                    ft.add(R.id.fragment_content, fragment);
                 }
                 ft.commitAllowingStateLoss();
             }
