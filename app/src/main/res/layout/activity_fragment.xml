@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.yinfeng.ui.activity.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/topbar_bg">
+            
+            <ImageView
+                android:id="@+id/yf_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:baselineAligned="true">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/ditu"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_ditu"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/ditu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_ditu"
+                    android:layout_below="@+id/i_ditu"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/huodong"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_huodong"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/huodong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_huodong"
+                    android:layout_below="@+id/i_huodong"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/mine"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_mine"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_mine"
+                    android:layout_below="@+id/i_mine"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:id="@+id/anquan"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    android:id="@+id/i_anquan"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:text="@string/anquan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/t_anquan"
+                    android:layout_below="@+id/i_anquan"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold|italic"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_tab"
+            android:layout_below="@+id/top_bar"
+            android:orientation="vertical">
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottom_tab"/>
+    </RelativeLayout>
+</FrameLayout>

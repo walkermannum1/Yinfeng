@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Window;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -20,6 +21,7 @@ import com.example.user.yinfeng.ui.trace.QixApplication;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener {
+    private String TAG = MainActivity.class.getSimpleName();
     private ArrayList<Fragment> fragments;
     private QixApplication qixApp = null;
 
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_maina);
+        setContentView(R.layout.activity_main);
         qixApp = (QixApplication) getApplicationContext();
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
@@ -38,12 +40,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                            .addItem(new BottomNavigationItem(R.drawable.wod, "我的").setActiveColorResource(R.color.bottom_cl))
                            .addItem(new BottomNavigationItem(R.drawable.anq, "安全").setActiveColorResource(R.color.bottom_cl))
                            .setFirstSelectedPosition(0).initialise();
+        fragments = getFragments();
+        setDefaultFragment();//with some fatal problem
+        bottomNavigationBar.setTabSelectedListener(this);
     }
 
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.fragment_content, QixingFragment.newInstance(qixApp));
+        transaction.add(R.id.fragment_content, QixingFragment.newInstance(qixApp));
         transaction.commit();
     }
 
@@ -58,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     @Override
     public void onTabSelected(int position) {
+        Log.d(TAG, "onTabSelected() called with: " + "position = [" + position + "]");
         if (fragments != null) {
             if (position < fragments.size()) {
                 FragmentManager fm = getSupportFragmentManager();
