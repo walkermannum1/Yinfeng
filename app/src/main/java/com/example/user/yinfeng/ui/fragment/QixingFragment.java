@@ -18,14 +18,13 @@ import com.example.user.yinfeng.ui.trace.QixApplication;
 public class QixingFragment extends SupportMapFragment {
     private QixApplication qixApp = null;
 
-    public QixingFragment() {
+    /*public QixingFragment() {
 
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

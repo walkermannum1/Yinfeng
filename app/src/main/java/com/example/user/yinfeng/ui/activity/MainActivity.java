@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                            .addItem(new BottomNavigationItem(R.drawable.anq, "安全").setActiveColorResource(R.color.bottom_cl))
                            .setFirstSelectedPosition(0).initialise();
         fragments = getFragments();
-        setDefaultFragment();//with some fatal problem
+        //setDefaultFragment();//with some fatal problem
         bottomNavigationBar.setTabSelectedListener(this);
     }
 

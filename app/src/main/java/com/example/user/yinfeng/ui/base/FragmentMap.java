@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
+import com.baidu.location.LocationClient;
 import com.baidu.mapapi.map.BaiduMapOptions;
 import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.SupportMapFragment;
 import com.example.user.yinfeng.R;
 
@@ -15,6 +18,11 @@ import com.example.user.yinfeng.R;
 
 public class FragmentMap extends FragmentActivity {
     SupportMapFragment map;
+    static MapView sMapView = null;
+    /*private MapController mMapController = null;
+    LocationClient mLocationClient;
+    static MyLocationListener myListener = new MyLocationListener();*/
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
